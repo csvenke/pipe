@@ -1,0 +1,37 @@
+{
+  "name": "@csvenke/pipe",
+  "description": "Pipe with types",
+  "author": "Christian Svenkerud <csvenke@gmail.com>",
+  "license": "MIT",
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && rollup -c && cp src/index.d.ts dist",
+    "test": "ava",
+    "pretest": "yarn build",
+    "prettier": "prettier --write ."
+  },
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@babel/core": "^7.9.0",
+    "@csvenke/prettier-config": "3.0.0",
+    "ava": "^3.7.0",
+    "prettier": "2.0.4",
+    "rollup": "^2.6.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^5.3.0"
+  },
+  "prettier": "@csvenke/prettier-config",
+  "ava": {
+    "verbose": true,
+    "babel": true
+  }
+}
