@@ -13,6 +13,7 @@
   "files": [
     "dist"
   ],
+  "sideEffects": false,
   "scripts": {
     "build": "rm -rf dist && rollup -c && cp src/index.d.ts dist",
     "test": "ava",
