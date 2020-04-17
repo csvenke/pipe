@@ -16,6 +16,7 @@
   "scripts": {
     "build": "rm -rf dist && rollup -c && cp src/index.d.ts dist",
     "test": "ava",
+    "test-ci": "yarn check-prettier && yarn test",
     "pretest": "yarn build",
     "prettier": "prettier --write .",
     "check-prettier": "prettier --check ."
