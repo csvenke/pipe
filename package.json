@@ -1,6 +1,6 @@
 {
   "name": "@csvenke/pipe",
-  "description": "Pipe with types",
+  "description": "Pipe implementation with (almost) variadic kinds",
   "author": "Christian Svenkerud <csvenke@gmail.com>",
   "license": "MIT",
   "version": "1.0.0",
@@ -17,7 +17,8 @@
     "build": "rm -rf dist && rollup -c && cp src/index.d.ts dist",
     "test": "ava",
     "pretest": "yarn build",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "check-prettier": "prettier --check ."
   },
   "devDependencies": {
     "@ava/babel": "1.0.1",
