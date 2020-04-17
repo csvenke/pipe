@@ -21,3 +21,13 @@ test("should pass different types of args between functions", t => {
   t.is(piped("John"), true);
   t.is(piped("Jane"), false);
 });
+
+test("should return NHOJ", t => {
+  const getName = data => data.name;
+  const toUpperCase = str => str.toUpperCase();
+  const reverse = str => str.split("").reverse().join("");
+
+  const piped = pipe(getName, toUpperCase, reverse);
+
+  t.is(piped({ name: "john" }), "NHOJ");
+});

@@ -27,6 +27,11 @@ type LastIndexOf<T extends AnyFunction[]> = ((...x: T) => void) extends (
   ? U["length"]
   : never;
 
+/**
+ * Pipes n functions from left to right
+ *
+ * @since v1.0.0
+ */
 export default function pipe<F extends [AnyFunction, ...AnyFunction[]]>(
-  ...f: F & AsChain<F>
+  ...fns: F & AsChain<F>
 ): (arg: ArgType<F[0]>) => ReturnType<F[LastIndexOf<F>]>;
