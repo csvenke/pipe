@@ -26,7 +26,7 @@
     "@ava/babel": "1.0.1",
     "@babel/core": "7.9.0",
     "@csvenke/prettier-config": "3.0.0",
-    "ava": "3.8.0",
+    "ava": "3.8.1",
     "prettier": "2.0.5",
     "rollup": "2.7.2",
     "rollup-plugin-babel": "4.4.0",
